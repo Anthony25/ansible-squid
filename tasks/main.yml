@@ -74,6 +74,12 @@
   tags:
     - squid
 
+- name: Create cache directory
+  become: yes
+  command: squid -z
+  tags:
+    - squid
+
 - name: Ensure Squid service is started and enabled on boot
   become: yes
   service:
